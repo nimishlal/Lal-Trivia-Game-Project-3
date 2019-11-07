@@ -1,0 +1,28 @@
+.genarea{
+    background-image: url(/images/b4a4dca4afdda3357de88d74d183eb62.jpg);
+    background-size: cover;
+    background-repeat: inherit;
+}
+.fonthead{
+    color: whitesmoke;
+    border: dotted gray;
+}
+.fontbdy{
+    font-size: 100px;
+    color: whitesmoke;
+    border: dotted gray;
+    display: flex;
+    justify-content: center;
+}
+.play{
+    background-color: transparent;
+    border: dotted gray;
+    color: whitesmoke;
+    font-size: 100px;
+}
+.playM{
+    background-color: transparent;
+    border: dotted gray;
+    color: whitesmoke;
+    font-size: 60px;
+}
