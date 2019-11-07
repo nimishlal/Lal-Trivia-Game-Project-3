@@ -42,10 +42,15 @@ function page1Load(info){
     options.addEventListener('click',function(e){
         loadJSON("../Options.html");
     })
+    
 }
 
 function page2Load(info){
     injectionArea.innerHTML=info;
+    let backbtn = document.getElementById('backBtn');
+    backbtn.addEventListener('click',function(e){
+        loadJSON("../Menu.html");
+    })
 
 }
 
