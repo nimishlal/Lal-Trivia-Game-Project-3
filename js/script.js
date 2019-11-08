@@ -27,6 +27,12 @@ function loadJSON(url){
             else if(url=="../Options.html"){
                 page2Load(myArr);
             }
+            else if(url=="../instructions.html"){
+                intructionsLoad(myArr);
+            }
+            else {
+                alert('ADD A FUCKING ELSE IF THING');
+            }
         }
     };
     xmlhttp.open("GET", url, true);
@@ -42,6 +48,11 @@ function page1Load(info){
     options.addEventListener('click',function(e){
         loadJSON("../Options.html");
     })
+    let easy = document.getElementById('easy');
+    easy.addEventListener('click',function(e){
+        loadJSON("../instructions.html");
+    })
+    
     
 }
 
@@ -52,6 +63,9 @@ function page2Load(info){
         loadJSON("../Menu.html");
     })
 
+}
+function intructionsLoad(info){
+    injectionArea.innerHTML=info;
 }
 
 // function loadQuestions() {
