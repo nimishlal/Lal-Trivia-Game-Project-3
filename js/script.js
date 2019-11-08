@@ -30,6 +30,9 @@ function loadJSON(url){
             else if(url=="../instructions.html"){
                 intructionsLoad(myArr);
             }
+            else if(url=="../Game.html"){
+                gameLoad(myArr);
+            }
             else {
                 alert('ADD A FUCKING ELSE IF THING');
             }
@@ -74,6 +77,9 @@ function intructionsLoad(info){
     startBtn.addEventListener('click',function(e){
         loadJSON("../Game.html")
     })
+}
+function gameLoad(info){
+    injectionArea.innerHTML=info;
 }
 
 // function loadQuestions() {
