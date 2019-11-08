@@ -66,6 +66,14 @@ function page2Load(info){
 }
 function intructionsLoad(info){
     injectionArea.innerHTML=info;
+    let menuBtn= document.getElementById('menuBtn');
+    menuBtn.addEventListener('click',function(e){
+        loadJSON("../Menu.html")
+    })
+    let startBtn = document.getElementById('startBtn');
+    startBtn.addEventListener('click',function(e){
+        loadJSON("../Game.html")
+    })
 }
 
 // function loadQuestions() {
