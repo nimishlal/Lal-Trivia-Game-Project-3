@@ -400,5 +400,23 @@
       "a4": "Narlly Weasley",
       "c": "Molly Weasley"
     }
+  ],
+  "mdQ": [
+    {
+      "q": "What is the name of the newspaper that appears in 8 books?",
+      "a1": "Tomorrow Prophet",
+      "a2": "Daily Prophet",
+      "a3": "Jolly Prophet",
+      "a4": "Narlly Prophet",
+      "c": "Daily Prophet"
+    },
+    {
+      "q":"What is Hagrid’s big dog name?",
+      "a1":"Vang",
+      "a2":"Bimble Riddle",
+      "a3":"fang",
+      "a4":"Beater",
+      "c":"fang"
+    }
   ]
 }
