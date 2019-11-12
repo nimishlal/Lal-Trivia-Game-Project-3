@@ -143,7 +143,14 @@ function page1Load(info){
     easy.addEventListener('click',function(e){
         injectA("../instructions.html");
     })
-    
+    let mdBtn=document.getElementById('mdBtn');
+    mdBtn.addEventListener('click',function(e){
+        loadJSON("../instructions.html")
+    })
+    let hrdBtn=document.getElementById('hrdBtn');
+    hrdBtn.addEventListener('click',function(e){
+        loadJSON("../instructions.html")
+    })
     
 }
 
