@@ -6,10 +6,10 @@ let play = document.getElementById('play');
 let injectionArea = document.getElementById('injectionArea');
 
 play.addEventListener('click',function(e){
-    loadJSON("../Menu.html");
+    injectA("../Menu.html");
 })
 
-function loadJSON(url){
+function injectA(url){
     let xmlhttp = new XMLHttpRequest();
     //let url = "../Menu.html";
     
@@ -30,6 +30,9 @@ function loadJSON(url){
             else if(url=="../instructions.html"){
                 intructionsLoad(myArr);
             }
+            else if(url=="../game.html"){
+                gameLoad(myArr);
+            }
             else {
                 alert('ADD A FUCKING ELSE IF THING');
             }
@@ -46,11 +49,11 @@ function page1Load(info){
     
     let options=document.getElementById('options');
     options.addEventListener('click',function(e){
-        loadJSON("../Options.html");
+        injectA("../Options.html");
     })
     let easy = document.getElementById('easy');
     easy.addEventListener('click',function(e){
-        loadJSON("../instructions.html");
+        injectA("../instructions.html");
     })
     
     
@@ -60,14 +63,20 @@ function page2Load(info){
     injectionArea.innerHTML=info;
     let backbtn = document.getElementById('backBtn');
     backbtn.addEventListener('click',function(e){
-        loadJSON("../Menu.html");
+        injectA("../Menu.html");
     })
 
 }
 function intructionsLoad(info){
     injectionArea.innerHTML=info;
+    let startBtn=document.getElementById('startBtn');
+    startBtn.addEventListener('click',function(e){
+        injectA("../game.html");
+    })
 }
-
+ function gameLoad(info){
+     injectionArea.innerHTML=info
+ }
 // function loadQuestions() {
 
 //     let xmlhttp = new XMLHttpRequest();
