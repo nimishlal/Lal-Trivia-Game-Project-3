@@ -1,13 +1,101 @@
 //Intit Variables
-let diff = "easy";//can be medium or hard
-let triviaQ=[];
-let totalQuestions = 20;
+let diff = "../data/easyQ.json";//can be medium or hard
 let play = document.getElementById('play');
 let injectionArea = document.getElementById('injectionArea');
+
+let counter=document.getElementById('counter');
+let totalScore = 0;
+let Incorrect = 0;
+let totalQuestions = 20;
+let tQuestions = [];
+let qNum = 0;
+let timer = 5;
+let interval;
+
+let a1 = document.getElementById('a1');
+let a2 = document.getElementById('a2');
+let a3 = document.getElementById('a3');
+let a4 = document.getElementById('a4');
 
 play.addEventListener('click',function(e){
     injectA("../Menu.html");
 })
+
+function loadJSon(url) {
+    let xmlhttp = new XMLHttpRequest();
+
+
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            tQuestions = JSON.parse(this.responseText).ezQ;
+            console.log(tQuestions);
+            interval = setInterval(updateTime,1000);
+            counter.innerText=timer;
+            loadQuestions();
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
+
+
+function loadQuestions() {
+    //load the next questions
+    questions.innerText = tQuestions[qNum].q;
+    a1.innerText = tQuestions[qNum].a1;
+    a2.innerText = tQuestions[qNum].a2;
+    a3.innerText = tQuestions[qNum].a3;
+    a4.innerText = tQuestions[qNum].a4;
+}
+
+function checkAnswer(answer) {
+    //retrives the answer and see if it is correct
+    //increment your correct number
+    if (answer === tQuestions[qNum].c) {
+        totalScore++;
+    }
+    else {
+        Incorrect++;
+    }
+    correct.innerText = `${totalScore}/${totalQuestions}`;
+    timer=5;
+    counter.innerText=timer;
+    //go to next question
+    nextQuestion();
+
+}
+
+function nextQuestion() {
+    //prep to go to next question
+    //loadquestions
+    if (qNum<totalQuestions){
+        //will run until you hit total questions =20;
+        qNum++;
+        loadQuestions();
+    }
+    else{
+        //load up ending screen
+        //alert("You finished the game congrats i have spoken")
+        //clears the interval 
+        clearInterval(interval);
+    }
+
+}
+
+
+function updateTime(){
+    //Make sure time isnt over and it is showimg correct time
+    timer--;
+    if (timer==0){
+        timer=5;
+        counter.innerText=timer;
+        nextQuestion();
+    }
+    else{
+        counter.innerText=timer;
+    }
+}
 
 function injectA(url){
     let xmlhttp = new XMLHttpRequest();
@@ -77,49 +165,5 @@ function intructionsLoad(info){
  function gameLoad(info){
      injectionArea.innerHTML=info
  }
-// function loadQuestions() {
 
-//     let xmlhttp = new XMLHttpRequest();
-//     let url = "";//"../data/easyQ.json";
-    
-//     if (diff == "easy") {
-//          url = "../data/easyQ.json";
-//     }
-//     //fail safe
-//     if (diff == "") {
-//          url = "../data/easyQ.json";
-//     }
-    
-//     //------------------------
-//     xmlhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             let myArr = JSON.parse(this.responseText);
-//             allQuestions(myArr);
-//         }
-//     };
-
-//     xmlhttp.open("GET", url, true);
-//     xmlhttp.send();
-
-// }
-
-// function allQuestions(q) {
-//     //q is triviaQFull
-//     console.log(q.ezQ[49]);
-//     let qNum=0;
-//     for (let i = 0;i<totalQuestions;i++)
-//     {
-//         //we are going to shuffle
-//         qNum = Math.floor(Math.random()*q.ezQ.length);
-//         //console.log(qNum)
-//         //add from exQ json array to triviaQ 
-//         triviaQ.push(q.ezQ[qNum]);
-//         //remove the item from ezQ
-//         q.ezQ.splice(qNum,1);
-        
-//     }
-//     console.log(triviaQ)
-// }
-
-//kicks of our request
-//loadQuestions();
+ loadJSon(diff);
