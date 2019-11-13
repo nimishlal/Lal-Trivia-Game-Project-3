@@ -77,8 +77,9 @@ function nextQuestion() {
         //load up ending screen
         //alert("You finished the game congrats i have spoken")
         //clears the interval 
+        //gameoverLoad();
+        injectA('../gameover.html');
         clearInterval(interval);
-        gameoverLoad();
 
     }
 
@@ -201,6 +202,10 @@ function gameLoad(info) {
 }
 function gameoverLoad(info){
     injectionArea.innerHTML=info;
+    let playAgain=document.getElementById('playAgain');
+    playAgain.addEventListener('click',function(e){
+        injectA("../menu.Html");
+    });
 }
 
 //loadJSon(diff);
