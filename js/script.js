@@ -151,10 +151,6 @@ function page1Load(info) {
         loadJSon(diff);
 
     })
-    let mdBtn = document.getElementById('mdBtn');
-    mdBtn.addEventListener('click', function (e) {
-        loadJSON("../instructions.html")
-    })
     let hrdBtn = document.getElementById('hrdBtn');
     hrdBtn.addEventListener('click', function (e) {
         loadJSON("../instructions.html")
@@ -204,7 +200,7 @@ function gameoverLoad(info){
     injectionArea.innerHTML=info;
     let playAgain=document.getElementById('playAgain');
     playAgain.addEventListener('click',function(e){
-        injectA("../menu.Html");
+        injectA("../Menu.html");
     });
 }
 
