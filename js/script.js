@@ -8,11 +8,15 @@ let Incorrect = 0;
 let totalQuestions = 20;
 let tQuestions = [];
 let qNum = 0;
-let timer = 5;
+let timer = 20;
 let interval;
+
+
+let audio= new Audio("../music/hp.mp3")
 
 play.addEventListener('click', function (e) {
     injectA("../Menu.html");
+    audio.play();
 })
 
 function loadJSon(url) {
@@ -58,7 +62,7 @@ function checkAnswer(answer) {
         Incorrect++;
     }
     correct.innerText = `${totalScore}/${totalQuestions}`;
-    timer = 5;
+    timer = 20;
     counter.innerText = timer;
     //go to next question
     nextQuestion();
@@ -91,7 +95,7 @@ function updateTime() {
     let counter = document.getElementById('counter');
     timer--;
     if (timer == 0) {
-        timer = 5;
+        timer = 20;
         counter.innerText = timer;
         nextQuestion();
     }
@@ -113,10 +117,10 @@ function injectA(url) {
             //add our conditional statements
             if (url == "../Menu.html") {
                 console.log("It works")
-                page1Load(myArr);
+                menuLoad(myArr);
             }
             else if (url == "../Options.html") {
-                page2Load(myArr);
+                optionsLoad(myArr);
             }
             else if (url == "../instructions.html") {
                 intructionsLoad(myArr);
@@ -137,7 +141,7 @@ function injectA(url) {
 
 }
 
-function page1Load(info) {
+function menuLoad(info) {
     //Going to load page 1 HTML Elements and click events
     injectionArea.innerHTML = info;
 
@@ -158,12 +162,22 @@ function page1Load(info) {
 
 }
 
-function page2Load(info) {
+function optionsLoad(info) {
     injectionArea.innerHTML = info;
     let backbtn = document.getElementById('backBtn');
     backbtn.addEventListener('click', function (e) {
         injectA("../Menu.html");
-    })
+    });
+    let musicOn=document.getElementById('musicOn');
+    musicOn.addEventListener('click',function(e){
+        console.log("it worked")
+        audio.play();
+    });
+    let musicOff=document.getElementById('musicOff');
+    musicOff.addEventListener('click',function(e){
+        audio.pause();
+        audio.currentTime=0;
+    });
 
 }
 function intructionsLoad(info) {
@@ -202,6 +216,7 @@ function gameoverLoad(info){
     playAgain.addEventListener('click',function(e){
         injectA("../Menu.html");
     });
+
 }
 
 //loadJSon(diff);
