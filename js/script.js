@@ -78,6 +78,7 @@ function nextQuestion() {
         //alert("You finished the game congrats i have spoken")
         //clears the interval 
         clearInterval(interval);
+        gameoverLoad();
 
     }
 
@@ -121,6 +122,9 @@ function injectA(url) {
             }
             else if (url == "../game.html") {
                 gameLoad(myArr);
+            }
+            else if(url=="../gameover.html"){
+                gameoverLoad(myArr);
             }
             else {
                 alert('ADD A FUCKING ELSE IF THING');
@@ -194,6 +198,9 @@ function gameLoad(info) {
         checkAnswer(e.toElement.innerText);
     })
     loadQuestions();
+}
+function gameoverLoad(info){
+    injectionArea.innerHTML=info;
 }
 
 //loadJSon(diff);
