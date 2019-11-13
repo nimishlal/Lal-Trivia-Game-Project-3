@@ -78,6 +78,7 @@ function nextQuestion() {
         //alert("You finished the game congrats i have spoken")
         //clears the interval 
         clearInterval(interval);
+
     }
 
 }
@@ -142,6 +143,8 @@ function page1Load(info) {
     let easy = document.getElementById('easy');
     easy.addEventListener('click', function (e) {
         injectA("../instructions.html");
+        loadJSon(diff);
+
     })
     let mdBtn = document.getElementById('mdBtn');
     mdBtn.addEventListener('click', function (e) {
@@ -178,18 +181,19 @@ function gameLoad(info) {
     let a4 = document.getElementById('a4');
     
     a1.addEventListener('click',function(e){
-        checkAnswer(e.ToElement.innerText);
+        console.log(e);
+        checkAnswer(e.toElement.innerText);
     })
     a2.addEventListener('click',function(e){
-        checkAnswer(e.ToElement.innerText);
+        checkAnswer(e.toElement.innerText);
     })
     a3.addEventListener('click',function(e){
-        checkAnswer(e.ToElement.innerText);
+        checkAnswer(e.toElement.innerText);
     })
     a4.addEventListener('click',function(e){
-        checkAnswer(e.ToElement.innerText);
+        checkAnswer(e.toElement.innerText);
     })
     loadQuestions();
 }
 
-loadJSon(diff);
+//loadJSon(diff);
