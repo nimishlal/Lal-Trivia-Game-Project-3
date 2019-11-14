@@ -10,22 +10,34 @@ let tQuestions = [];
 let qNum = 0;
 let timer = 20;
 let interval;
+let hQuestions = [];
 
 
-let audio= new Audio("../music/hp.mp3")
+let audio = new Audio("../music/hp.mp3")
 
 play.addEventListener('click', function (e) {
     injectA("../Menu.html");
     audio.play();
 })
 
+function ranQues(info) {
+    console.log("it works")
+    for (let i = 0; i < totalQuestions; i++) {
+        tQuestions.push(info.ezQ[qNum]);
+        info.ezQ.splice(qNum,1);
+    }
+}
+
+function ranNumber(){
+    ranNumber=Math.floor(math.ra)
+}
 function loadJSon(url) {
     let xmlhttp = new XMLHttpRequest();
 
-
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            tQuestions = JSON.parse(this.responseText).ezQ;
+            myArr = JSON.parse(this.responseText).ezQ;
+            ranQues(myArr);
             console.log(tQuestions);
         }
     };
@@ -34,6 +46,22 @@ function loadJSon(url) {
     xmlhttp.send();
 }
 
+
+
+function loadHard(url) {
+    let xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            hQuestions = JSON.parse(this.responseText).hdQ;
+            //console.log(hQuestions);
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+}
 
 function loadQuestions() {
     clearInterval(interval);
@@ -50,11 +78,12 @@ function loadQuestions() {
     interval = setInterval(updateTime, 1000);
 }
 
+
 function checkAnswer(answer) {
     //retrives the answer and see if it is correct
     //increment your correct number
     let correct = document.getElementById('correct');
-    console.log('checkAnswer ran');
+    //console.log('checkAnswer ran');
     if (answer === tQuestions[qNum].c) {
         totalScore++;
     }
@@ -111,12 +140,12 @@ function injectA(url) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let myArr = this.responseText;//JSON.parse(this.responseText);
-            console.log(myArr);
+            //console.log(myArr);
             //injectHTML(myArr);
             //inject.innerHTML=myArr;
             //add our conditional statements
             if (url == "../Menu.html") {
-                console.log("It works")
+                //console.log("It works")
                 menuLoad(myArr);
             }
             else if (url == "../Options.html") {
@@ -128,7 +157,7 @@ function injectA(url) {
             else if (url == "../game.html") {
                 gameLoad(myArr);
             }
-            else if(url=="../gameover.html"){
+            else if (url == "../gameover.html") {
                 gameoverLoad(myArr);
             }
             else {
@@ -157,7 +186,8 @@ function menuLoad(info) {
     })
     let hrdBtn = document.getElementById('hrdBtn');
     hrdBtn.addEventListener('click', function (e) {
-        loadJSON("../instructions.html")
+        injectA("../instructions.html");
+        loadHard(diff);
     })
 
 }
@@ -168,15 +198,15 @@ function optionsLoad(info) {
     backbtn.addEventListener('click', function (e) {
         injectA("../Menu.html");
     });
-    let musicOn=document.getElementById('musicOn');
-    musicOn.addEventListener('click',function(e){
-        console.log("it worked")
+    let musicOn = document.getElementById('musicOn');
+    musicOn.addEventListener('click', function (e) {
+        //console.log("it worked")
         audio.play();
     });
-    let musicOff=document.getElementById('musicOff');
-    musicOff.addEventListener('click',function(e){
+    let musicOff = document.getElementById('musicOff');
+    musicOff.addEventListener('click', function (e) {
         audio.pause();
-        audio.currentTime=0;
+        audio.currentTime = 0;
     });
 
 }
@@ -194,29 +224,38 @@ function gameLoad(info) {
     let a2 = document.getElementById('a2');
     let a3 = document.getElementById('a3');
     let a4 = document.getElementById('a4');
-    
-    a1.addEventListener('click',function(e){
-        console.log(e);
+
+    a1.addEventListener('click', function (e) {
+        //console.log(e);
         checkAnswer(e.toElement.innerText);
     })
-    a2.addEventListener('click',function(e){
+    a2.addEventListener('click', function (e) {
         checkAnswer(e.toElement.innerText);
     })
-    a3.addEventListener('click',function(e){
+    a3.addEventListener('click', function (e) {
         checkAnswer(e.toElement.innerText);
     })
-    a4.addEventListener('click',function(e){
+    a4.addEventListener('click', function (e) {
         checkAnswer(e.toElement.innerText);
     })
     loadQuestions();
 }
-function gameoverLoad(info){
-    injectionArea.innerHTML=info;
-    let playAgain=document.getElementById('playAgain');
-    playAgain.addEventListener('click',function(e){
+function gameoverLoad(info) {
+    injectionArea.innerHTML = info;
+    let playAgain = document.getElementById('playAgain');
+    playAgain.addEventListener('click', function (e) {
+        totalScore = 0;
+        Incorrect = 0;
+        totalQuestions = 20;
+        tQuestions = [];
+        qNum = 0;
+        timer = 20;
+        interval;
         injectA("../Menu.html");
-    });
 
+    });
 }
+
+
 
 //loadJSon(diff);
