@@ -10,7 +10,9 @@ let tQuestions = [];
 let qNum = 0;
 let timer = 20;
 let interval;
-let hQuestions = [];
+let ezqArr = [];
+let hdqArr = [];
+let difficulty = 0;
 
 
 let audio = new Audio("../music/hp.mp3")
@@ -20,25 +22,23 @@ play.addEventListener('click', function (e) {
     audio.play();
 })
 
-function ranQues(info) {
+function ranQues(q) {
     console.log("it works")
     for (let i = 0; i < totalQuestions; i++) {
-        tQuestions.push(info.ezQ[qNum]);
-        info.ezQ.splice(qNum,1);
+        let rNum = Math.floor(Math.random()*q.length)
+        tQuestions.push(q[rNum]);
+        q.splice(rNum,1);
     }
+    console.log(tQuestions);
 }
 
-function ranNumber(){
-    ranNumber=Math.floor(math.ra)
-}
 function loadJSon(url) {
     let xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            myArr = JSON.parse(this.responseText).ezQ;
-            ranQues(myArr);
-            console.log(tQuestions);
+            ezqArr = JSON.parse(this.responseText).ezQ;
+            hdqArr = JSON.parse(this.responseText).hdQ;
         }
     };
 
@@ -48,22 +48,24 @@ function loadJSon(url) {
 
 
 
-function loadHard(url) {
-    let xmlhttp = new XMLHttpRequest();
+// function loadHard(url) {
+//     let xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            hQuestions = JSON.parse(this.responseText).hdQ;
-            //console.log(hQuestions);
-        }
-    };
+//     xmlhttp.onreadystatechange = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             hQuestions = JSON.parse(this.responseText).hdQ;
+//             //console.log(hQuestions);
+//         }
+//     };
 
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
 
-}
+// }
 
 function loadQuestions() {
+    console.log(qNum);
+
     clearInterval(interval);
     let a1 = document.getElementById('a1');
     let a2 = document.getElementById('a2');
@@ -101,9 +103,9 @@ function checkAnswer(answer) {
 function nextQuestion() {
     //prep to go to next question
     //loadquestions
+    qNum++;
     if (qNum < totalQuestions) {
         //will run until you hit total questions =20;
-        qNum++;
         loadQuestions();
     }
     else {
@@ -154,8 +156,11 @@ function injectA(url) {
             else if (url == "../instructions.html") {
                 intructionsLoad(myArr);
             }
-            else if (url == "../game.html") {
-                gameLoad(myArr);
+            else if (url == "../game.html" && difficulty==1) {
+                gameLoad(myArr, ezqArr);
+            }
+            else if(url=="../game.html"&&difficulty==2){
+                gameLoad(myArr,hdqArr);
             }
             else if (url == "../gameover.html") {
                 gameoverLoad(myArr);
@@ -180,14 +185,13 @@ function menuLoad(info) {
     })
     let easy = document.getElementById('easy');
     easy.addEventListener('click', function (e) {
+        difficulty=1;
         injectA("../instructions.html");
-        loadJSon(diff);
-
     })
     let hrdBtn = document.getElementById('hrdBtn');
     hrdBtn.addEventListener('click', function (e) {
+        difficulty=2;
         injectA("../instructions.html");
-        loadHard(diff);
     })
 
 }
@@ -217,14 +221,26 @@ function intructionsLoad(info) {
         injectA("../game.html");
     })
 }
-function gameLoad(info) {
-    injectionArea.innerHTML = info;
+function previousQuestion(){
+    if(qNum>0){
+        let specialF=document.getElementById('specialF');
+        specialF.remove();
+        qNum--;
+        loadQuestions();
+    }
+}
 
+function gameLoad(info, arr) {
+    ranQues(arr);
+    injectionArea.innerHTML = info;
+    let specialF=document.getElementById('specialF');
     let a1 = document.getElementById('a1');
     let a2 = document.getElementById('a2');
     let a3 = document.getElementById('a3');
     let a4 = document.getElementById('a4');
-
+    specialF.addEventListener('click',function(e){
+        previousQuestion();
+    })
     a1.addEventListener('click', function (e) {
         //console.log(e);
         checkAnswer(e.toElement.innerText);
@@ -243,6 +259,8 @@ function gameLoad(info) {
 function gameoverLoad(info) {
     injectionArea.innerHTML = info;
     let playAgain = document.getElementById('playAgain');
+    let winL=document.getElementById('winL');
+    winL.innerText=totalScore;
     playAgain.addEventListener('click', function (e) {
         totalScore = 0;
         Incorrect = 0;
@@ -257,5 +275,4 @@ function gameoverLoad(info) {
 }
 
 
-
-//loadJSon(diff);
+loadJSon(diff);
