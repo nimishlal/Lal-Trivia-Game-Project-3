@@ -47,22 +47,6 @@ function loadJSon(url) {
 }
 
 
-
-// function loadHard(url) {
-//     let xmlhttp = new XMLHttpRequest();
-
-//     xmlhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             hQuestions = JSON.parse(this.responseText).hdQ;
-//             //console.log(hQuestions);
-//         }
-//     };
-
-//     xmlhttp.open("GET", url, true);
-//     xmlhttp.send();
-
-// }
-
 function loadQuestions() {
     console.log(qNum);
 
@@ -219,6 +203,10 @@ function intructionsLoad(info) {
     let startBtn = document.getElementById('startBtn');
     startBtn.addEventListener('click', function (e) {
         injectA("../game.html");
+    })
+    let menuBtn=document.getElementById('menuBtn');
+    menuBtn.addEventListener('click',function(e){
+        injectA("../Menu.html");
     })
 }
 function previousQuestion(){
