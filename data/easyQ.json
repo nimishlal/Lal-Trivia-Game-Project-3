@@ -411,23 +411,396 @@
       "c": "Daily Prophet"
     },
     {
-      "q":"What is Hagrid’s big dog name?",
-      "a1":"Vang",
-      "a2":"Bimble Riddle",
-      "a3":"fang",
-      "a4":"Beater",
-      "c":"fang"
+      "q": "What is Hagrid’s big dog name?",
+      "a1": "Vang",
+      "a2": "Bimble Riddle",
+      "a3": "fang",
+      "a4": "Beater",
+      "c": "fang"
     },
     {
-      "q":"Is Kira the name of Albus and Aberforth's mother?",
-      "a1":"No",
-      "a2":"Yes",
-      "a3":"Maybe",
-      "a4":"Definitely Yes",
-      "c":"No"
+      "q": "Is Kira the name of Albus and Aberforth's mother?",
+      "a1": "No",
+      "a2": "Yes",
+      "a3": "Maybe",
+      "a4": "Definitely Yes",
+      "c": "No"
     },
     {
-      
+      "q": "What is the name of the person who killed Professor Dumbledore?",
+      "a1": "Ludo Bagman",
+      "a2": "Bathilda Bagshot ",
+      "a3": "Severus Snape",
+      "a4": "Frank Bryce ",
+      "c": "Severus Snape"
+    },
+    {
+      "q": "At Hogwarts? What is the name of a person who leads the flying classes?",
+      "a1": "Aberforth",
+      "a2": "Madam Rolanda Hooch",
+      "a3": "Chaser",
+      "a4": "The house of Hufflepuff",
+      "c": "Madam Rolanda Hooch"
+    },
+    {
+      "q": "In which way the Harry Potter catches his very first snitch?",
+      "a1": "By using his mouth",
+      "a2": "By using his nose",
+      "a3": "By using his eyes",
+      "a4": "By using his ears",
+      "c": "By using his mouth"
+    },
+    {
+      "q": "What are the names of Ron’s Mother and Father?",
+      "a1": "Molly and Ben Weasley",
+      "a2": "Molly and Rother Weasley",
+      "a3": "Molly and Mappet Weasley",
+      "a4": "Molly and Arthur Weasley",
+      "c": "Molly and Arthur Weasley"
+    },
+    {
+      "q": "What is Harry Potter’s first book name?",
+      "a1": "Harry Potter and the Sorcerer's Stone",
+      "a2": "Harry Potter and the Deathly Hallows",
+      "a3": "Harry Potter and the Cursed Child",
+      "a4": "Harry Potter and the Philosopher’s Stone",
+      "c": "Harry Potter and the Philosopher’s Stone"
+    },
+    {
+      "q": " Tell the name of Dumbledore’s phoenix?",
+      "a1": "Zawkes",
+      "a2": "Fawkes",
+      "a3": "Rawkes",
+      "a4": "Hawkes",
+      "c": "Fawkes"
+    },
+    {
+      "q": "In the Chamber of Secrets, what is the name of a person who takes over as ‘Defence Against the Dark Arts’ teacher",
+      "a1": "Mary Cattermole",
+      "a2": "Cuthbert Binns",
+      "a3": "Gilderoy Lockhart",
+      "a4": "Susan Bones",
+      "c": "Gilderoy Lockhart"
+    },
+    {
+      "q": "  What is the method which is not used by the Hogwarts to get Harry Potter his letters?",
+      "a1": "Bewitching the milkman",
+      "a2": "Bewitching the professor",
+      "a3": "Bewitching the janitor",
+      "a4": "Bewitching the minister",
+      "c": "Bewitching the milkman"
+    },
+    {
+      "q": "What is the last name of Hermione?",
+      "a1": "Grander",
+      "a2": "Granger",
+      "a3": "Granper",
+      "a4": "Grenner",
+      "c": "Granger"
+    },
+    {
+      "q": "Who is the person that is known as Grawp?",
+      "a1": "The half brother of the Giant",
+      "a2": "The full brother of a ape",
+      "a3": "The half brother of Weasley",
+      "a4": "The full brother of a giant",
+      "c": "The half brother of the Giant"
+    },
+    {
+      "q": "What is the name of a person who is Scabbers in his form of Animagus?",
+      "a1": "Penelope Clearwater",
+      "a2": "Roger Davie",
+      "a3": "Peter Pettigrew",
+      "a4": "Percival Dumbledore",
+      "c": "Peter Pettigrew"
+    },
+    {
+      "q": "What is a thing that is seen by Harry Potter in his dream of attacking Ron’s father?",
+      "a1": "Snake",
+      "a2": "Cat",
+      "a3": "Fish",
+      "a4": "Owl",
+      "c": "Snake"
+    },
+    {
+      "q": "What is the name of a magical talent that Harry shared with Voldemort?",
+      "a1": "Scar",
+      "a2": "Toes Sync",
+      "a3": "Flying car",
+      "a4": "Raven mist",
+      "c": "Flying car"
+    },
+    {
+      "q": " How did the Moaning Myrtle die?",
+      "a1": "Due to much sleep",
+      "a2": "Due to a flu",
+      "a3": "Due to Wit and learning",
+      "a4": "Due to a accident",
+      "c": "Due to Wit and learning"
+    },
+    {
+      "q": "In the chamber what kind of the monster was placed by the Salazar Slytherin?",
+      "a1": "Goblin",
+      "a2": "Pixie",
+      "a3": "A basilisk",
+      "a4": "Werewolf",
+      "c": "A basilisk"
+    },
+    {
+      "q": "In which way the Fawkes the Phoenix save Harry Potter?",
+      "a1": "By using a feather",
+      "a2": "By using a curse",
+      "a3": "By using water",
+      "a4": "By using his tears",
+      "c": "By using his tears"
+    },
+    {
+      "q": " What are the names of teams that were the players of the Quidditch World Cup that Harry Potter attended?",
+      "a1": "Bulgaria and Ireland",
+      "a2": "Bulgia and Ireland",
+      "a3": "Bigland and Ireland",
+      "a4": "Muvia and Ireland",
+      "c": "Bulgaria and Ireland"
+    },
+    {
+      "q": "What is the Gryffindor house symbol?",
+      "a1": "fish",
+      "a2": "Lion",
+      "a3": "Snake",
+      "a4": "Owl",
+      "c": "Lion"
+    },
+    {
+      "q": "Dumbledore will what did she leave Hermione?",
+      "a1": "Tales of owls",
+      "a2": "Tales of death",
+      "a3": "Takes of needle in a haystack",
+      "a4": "Tales of Beedle the Bard",
+      "c": "Tales of Beedle the Bard"
+    },
+    {
+      "q": "When first time Hagrid met to harry potter what he gives to him?",
+      "a1": "Pudding",
+      "a2": "Wand",
+      "a3": "Birthday cake",
+      "a4": "Spell",
+      "c": "Birthday cake"
+    },
+    {
+      "q": "How many points are worth by the Golden Snitch?",
+      "a1": "15",
+      "a2": "12",
+      "a3": "10",
+      "a4": "20",
+      "c": "15"
+    },
+    {
+      "q": "What does Harry Potter want to become after completing graduation from Hogwarts?",
+      "a1": "An Buror",
+      "a2": "An Huror",
+      "a3": "An Auror",
+      "a4": "An Muror",
+      "c": "An Auror"
+    },
+    {
+      "q": "During the Apparition Test which body part does the Ron leave behind?",
+      "a1": "Part of his mouth",
+      "a2": "Parth of his nose",
+      "a3": "Part of his eyebrows",
+      "a4": "Part of his ears",
+      "c": "Part of his eyebrows"
+    },
+    {
+      "q": "What was showing on the Marauder Map?",
+      "a1": "location of every persons death",
+      "a2": "location of every person in the school",
+      "a3": "location of every persons family",
+      "a4": "location of the snake",
+      "c": "location of every person in the school"
+    },
+    {
+      "q": "What is the name of the person who Scabbers the rat?",
+      "a1": "Peter Pettigrew",
+      "a2": "Percival Dumbledore",
+      "a3": "Marcus Flint",
+      "a4": "Filius Flitwick",
+      "c": "Peter Pettigrew"
+    },
+    {
+      "q": "When was the harry potter was born?",
+      "a1": "31st July 1980",
+      "a2": "20st July 1980",
+      "a3": "11st July 1980",
+      "a4": "1st July 1980",
+      "c": "31st July 1980"
+    },
+    {
+      "q": " Who is the oldest brother of Weasley?",
+      "a1": "Nill",
+      "a2": "Mill",
+      "a3": "Bill",
+      "a4": "Vill",
+      "c": "Bill"
+    },
+    {
+      "q": "Which potion Slughorn is used as a prize?",
+      "a1": "Amortentia",
+      "a2": "Draught of Peace",
+      "a3": "Confusing Concoction",
+      "a4": "Felix Felices",
+      "c": "Felix Felices"
+    },
+    {
+      "q": "What is the spell that Hermione Granger used to mend Harry Potter's glasses?",
+      "a1": "Brackium Emendo",
+      "a2": "Aculos Reparo",
+      "a3": "Confundo",
+      "a4": "Alohomora",
+      "c": "Aculos Reparo"
+    },
+    {
+      "q": " What Houses are the Susan and Draco Malfoy Bornes in?",
+      "a1": "Slytherin and Huffelpuff",
+      "a2": "Gryffindor and Raven Claw",
+      "a3": "Raven Claw and Huffelpuff",
+      "a4": "Slytherin and Raven Claw",
+      "c": "Slytherin and Huffelpuff"
+    },
+    {
+      "q": "What is the name of a person who teaches Divination (History of magic)?",
+      "a1": "Professor Minns and Professor Veavalway",
+      "a2": "Professor Nitts and Professor Rovaely",
+      "a3": "Professor Binns and Professor Trelawney",
+      "a4": "Professor Kinns and Professor Acfreify",
+      "c": "Professor Binns and Professor Trelawney"
+    },
+    {
+      "q": "What is the name of the language that the snakes can speak in the movie?",
+      "a1": "Parseltongue",
+      "a2": "Venuasaltongue",
+      "a3": "Pensaltongue",
+      "a4": "Parsel",
+      "c": "Parseltongue"
+    },
+    {
+      "q": "What is the name of the person who accompanied the Harry Potter to the Yule Ball?",
+      "a1": "Parvati Patil",
+      "a2": "Argus Filch ",
+      "a3": "Robert Galbraith",
+      "a4": "Peter Pettigrew",
+      "c": "Parvati Patil"
+    },
+    {
+      "q": "What Malfoy call to Hermione?",
+      "a1": "Deadblood",
+      "a2": "Mudblood",
+      "a3": "Nastyblood",
+      "a4": "Disblood",
+      "c": "Mudblood"
+    },
+    {
+      "q": "How Hermione did take her extra lessons in the third year?",
+      "a1": "By using a spell",
+      "a2": "By using a Time-stopper",
+      "a3": "By using the Time-Turner",
+      "a4": "By using a Time-spell",
+      "c": "By using the Time-Turner"
+    },
+    {
+      "q": "What are the names of Harry’s two best friends?",
+      "a1": "Malfoy and Ron",
+      "a2": "Snape and Ron",
+      "a3": "Ron and Hermione",
+      "a4": "Herminone and Snape",
+      "c": "Ron and Hermione"
+    },
+    {
+      "q": "What was the reason for planting Whomping Willow?",
+      "a1": "To project the Mispin Lipin",
+      "a2": "To project the Lumin Rupin",
+      "a3": "To project the Emin Lupim",
+      "a4": "To project the Remus Lupin",
+      "c": "To project the Remus Lupin"
+    },
+    {
+      "q": "What kind of potion force the drinker to tell truth?",
+      "a1": "Draught of Living Death",
+      "a2": "Polyjuice Potion",
+      "a3": "Draught of Peace",
+      "a4": "Veritasearumm",
+      "c": "Veritasearumm"
+    },
+    {
+      "q": "Name the hippogriff that was a pet of Hagrid in the third year?",
+      "a1": "Ruckbeak",
+      "a2": "Muckbeak",
+      "a3": "Buckbeak",
+      "a4": "VuckBeak",
+      "c": "Buckbeak"
+    },
+    {
+      "q": "What is Peeves?",
+      "a1": "A Poltergeist.",
+      "a2": "An Huror",
+      "a3": "The Fat Lady",
+      "a4": "Susan Bones",
+      "c": "A Poltergeist."
+    },
+    {
+      "q": "What spell can help to protect from the dementor?",
+      "a1": "Alohomora",
+      "a2": "Confundo",
+      "a3": "Expecto patronum",
+      "a4": "Aguamenti",
+      "c": "Expecto patronum"
+    },
+    {
+      "q": "IN the first challenge of the Triwizard tournament what kind of dragon was faced by the Harry Potter?",
+      "a1": "The Mandorian Horltail",
+      "a2": "The Vengarian Horltail",
+      "a3": "The Hungarian Horntail",
+      "a4": "The Bungrian Horntail",
+      "c": "The Hungarian Horntail"
+    },
+    {
+      "q": "Which ear was lost by the Fred Weasley?",
+      "a1": "Harry is the person who lost his ear.",
+      "a2": "Minral is the person who lost his ear.",
+      "a3": "George is the person who lost his ear.",
+      "a4": "Vicks is the person who lost his ear.",
+      "c": "George is the person who lost his ear."
+    },
+    {
+      "q": "What is the full name of Albus Dumbledore?",
+      "a1": "Albus Percival  Brian Dumbledore",
+      "a2": "Albus  Wulfric Brian Dumbledore",
+      "a3": "Albus Percival Wulfric  Dumbledore",
+      "a4": "Albus Percival Wulfric Brian Dumbledore",
+      "c": "Albus Percival Wulfric Brian Dumbledore"
+    },
+    {
+      "q": "What is given by the Sirius Black to Harry Potter in the third year?",
+      "a1": "Fire",
+      "a2": "Firsmist",
+      "a3": "Firebolt",
+      "a4": "Fireowl",
+      "c": "Firebolt"
+    },
+    {
+      "q": "Who is a Nagini?",
+      "a1": "The Giant Ape",
+      "a2": "The Giant snake",
+      "a3": "The Giant Dragon",
+      "a4": "The Giant",
+      "c": "The Giant snake"
+    },
+    {
+      "q": "Which method is not used for wizards transport??",
+      "a1": "A Wave",
+      "a2": "A Faze",
+      "a3": "A Sock",
+      "a4": "A Teleport",
+      "c": "A Sock"
     }
   ]
 }
